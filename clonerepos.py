@@ -13,6 +13,6 @@ with open(csvpath) as csvfile:
         else:
             dirname = row[4]
         dirname = "\""+ dirname+"\""
-        subprocess.run(["mkdir "+ dirname], shell=True)
-        subprocess.run(["git clone git@github.com:Classroom-RIT/" + row[5]+" "+dirname], shell=True)
+        subprocess.run(["mkdir", dirname])
+        subprocess.run(["git", "clone", f"git@github.com:Classroom-RIT/{row[5]} {dirname}"])
 
